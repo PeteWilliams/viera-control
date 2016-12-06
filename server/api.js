@@ -10,17 +10,17 @@
       res.end();
     });
 
-    vieraControl.get('/tv/:ip/:ip/menu', function(req, res) {
+    vieraControl.get('/tv/:ip/menu', function(req, res) {
       sendRequest(req.params.ip, 'command', 'X_SendKey', '<X_KeyEvent>NRC_MENU-ONOFF</X_KeyEvent>');
       res.end();
     });
 
-    vieraControl.get('/tv/:ip/:ip/3d', function(req, res) {
+    vieraControl.get('/tv/:ip/3d', function(req, res) {
       sendRequest(req.params.ip, 'command', 'X_SendKey', '<X_KeyEvent>NRC_3D-ONOFF</X_KeyEvent>');
       res.end();
     });
 
-    vieraControl.get('/tv/:ip/:ip/ok', function(req, res) {
+    vieraControl.get('/tv/:ip/ok', function(req, res) {
       sendRequest(req.params.ip, 'command', 'X_SendKey', '<X_KeyEvent>NRC_ENTER-ONOFF</X_KeyEvent>');
       res.end();
     });
@@ -113,7 +113,7 @@
       res.end();
     });
 
-    vieraControl.get('/tv/:ip/volume/mute', function(req, res) {
+    vieraControl.post('/tv/:ip/volume/mute', function(req, res) {
       sendRequest(req.params.ip, 'command', 'X_SendKey', '<X_KeyEvent>NRC_MUTE-ONOFF</X_KeyEvent>');
       res.end();
     });

@@ -20,7 +20,14 @@ Simple mobile optimized UI
 _ _ _ 
 ### API: ####
 
-All API calls except `/tv/<ip_address>/action` are GET
+Most API calls are GET except
+
+*  `/tv/<ip_address>/action`
+*  `/tv/<ip_address>/volume/plus`
+*  `/tv/<ip_address>/volume/minus`
+*  `/tv/<ip_address>/volume/mute`
+
+Which are POST
 
 #### Using: ####
 
